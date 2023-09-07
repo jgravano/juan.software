@@ -17,31 +17,73 @@ html, body {
 }
 
 .color1 {
-  background-color: #58534c;
+  background-color: #83BCA9;
+}
+
+.color1 .card-content{
+  color: #1B3022;
+}
+
+.color1 h2 {
+  font-size: 5rem;
+}
+
+.color1 p {
+  font-size: 2rem;
 }
 
 .color2 {
-  background-color: #f1d3ab;
+  background-color: #A24936;
 }
 
+.color2 .card-content{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #EAE2B7;
+  text-align: end;
+  font-size: 1.8rem;
+}
+
+
 .color3 {
-  background-color: #dbce79;
+  background-color: #EEC170;
 }
 
 .color4 {
-  background-color: #f95842;
+  background-color: #564138;
 }
 
+/* styles.css */
+.color4-text1 {
+  font-size: 1.5rem;
+  color: #F58549;
+
+}
+
+.color4-text2 {
+  font-size: 2rem;
+  color: #F58549;
+
+}
+
+
 .color5 {
-  background-color: #0eaeab;
+  background-color: #3E5641
+  ;
 }
 
 .color6 {
-  background-color: #FF9B50;
+  background-color: #F58549;
 }
 
 .color7 {
-  background-color: #C63D2F;
+  background-color: #EAE2B7;
+}
+
+.color7 h2 {
+  font-size: 6rem;
+  color: #A24936;
 }
 
 .column.active {

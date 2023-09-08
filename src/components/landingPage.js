@@ -13,23 +13,23 @@ function LandingPage() {
       padding: '10px',
       boxSizing: 'border-box',
       position: 'relative',
-      backgroundColor: 'black'
+      backgroundColor: '#040D12'
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1vw', marginBottom: '1vh' }}>
         <Card className="color1"
           height="28vh"
-          width="80vw"
+          width="60vw"
           title={
             <div className="card-content">
               <h2>Juan Gravano</h2>
               <p>Software Engineer</p>
             </div>
           }
-          imageSrc={"https://docs.google.com/uc?export=download&id=1Dpwel7xUS-bxBfNQ2B_yLvcnDILPox4o"}
+         // imageSrc={"https://docs.google.com/uc?export=download&id=1mpX-AJrs3uNQEksdhmaFlhWcwhsZaKJ9"}
         />
 
 
-        <Card className="color2" height="28vh" width="20vw" >
+        <Card className="color2" height="28vh" width="40vw" >
           <div className="sub-cards-container">
             <div className="sub-card color-sub1">
               based in Buenos Aires, Argentina.
@@ -45,29 +45,47 @@ function LandingPage() {
 
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1vw', marginBottom: '1vh' }}>
-        <Card className="color3" height="28vh" width="40vw" />
-        <Card className="color4" height="28vh" width="45vw">
+        <Card className="color3" height="28vh" width="40vw">
+          <a href="path/to/your/CV.pdf" download className="download-link">
+            <h2>
+              Download Resume
+              <i className="fa fa-chevron-down" style={{ marginLeft: '10px' }}></i>
+            </h2>
+          </a>
+        </Card>
+        <Card className="color4" height="28vh" width="40vw">
           <div className="color4-text1">making stuff happen :)</div>
         </Card>
         <Card className="color5 special-card" height="28vh" width="30vw" imageSrc={"https://docs.google.com/uc?export=download&id=18wbJL_9dBdYs19hz9Aie5ug_0mKfMW2o"} />
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1vw' }}>
-        <Card className="color6" height="28vh" width="40vw" />
-        <Card className="color7" height="28vh" width="60vw">
-          <div className="color7-header">
-            <h2>Contact me:</h2>
-            <div className="color7-icons">
-              <a href="https://www.github.com/tu_nombre_de_usuario" target="_blank" rel="noopener noreferrer" className="color7-icon">
-                <i className="fa fa-github-alt fa-2x"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/tu_nombre_de_usuario" target="_blank" rel="noopener noreferrer" className="color7-icon">
-                <i className="fa fa-linkedin fa-2x"></i>
-              </a>
+        <Card className="color6" height="28vh" width="25vw">
+          <div className="circle-container">
+            <div className="circle color1"></div>
+            <div className="circle color2"></div>
+            <div className="circle color3"></div>
+            <div className="circle color4"></div>
+            <div className="circle color5"></div>
+            <div className="circle color7"></div>
+            <div className="circle color8"></div>
+          </div>
+        </Card>
+        <Card className="color7" height="28vh" width="70vw">
+          <div className="color7-content">
+            <div className="color7-column">
+              {[...Array(1)].map((_, i) => (
+                <div className="color7-header" key={i}>
+                  <h2>Contact me</h2>
+                  <div className="color7-icons">
+                    <a href="https://www.github.com/tu_nombre_de_usuario" target="_blank" rel="noopener noreferrer" className="color7-icon">
+                      <i className="fa fa-github-alt fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Card>
-
-
       </div>
     </div>
   );

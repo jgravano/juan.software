@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  background-color: black;
+  background-color: #040D12;
 }
 
 .card-content * {
@@ -14,33 +14,36 @@ body {
 }
 
 .color1 {
-  background-color: #c1f3e6;
+  background-color: #016A70;
 }
 
 .color1 .card-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; /* Esto garantiza que el contenedor tome toda la altura de la card */
+  height: 90%;
 }
 
 .color1 h2 {
-  font-size: 8rem;
-  color: #1F374B;
-  font-weight: 700;
-  margin: 0; /* Esto eliminará cualquier margen predeterminado para equilibrar el espacio */
+  font-size: 7rem;
+  color: #FFFFDD;
+  font-weight: 900;
+  margin: 0;
+  /* font-family: 'Raleway', sans-serif; */
+  /* Esto eliminará cualquier margen predeterminado para equilibrar el espacio */
 }
 
 .color1 p {
   font-size: 4rem;
-  color: #1B3022;
-  font-weight: 350;
-  margin: 0; /* Esto eliminará cualquier margen predeterminado para equilibrar el espacio */
+  color: #D2DE32;
+  font-weight: 600;
+  margin: 0;
+  /* Esto eliminará cualquier margen predeterminado para equilibrar el espacio */
 }
 
 
 .color2 {
-  background-color: #1F374B;
+  background-color: #FAF0E4;
 }
 
 .color2 .card-content {
@@ -50,8 +53,36 @@ body {
 }
 
 .color3 {
-  background-color: #c8fc3e;
+  background-color: #EEC170;
+  position: relative;
+  /* Esto es necesario para posicionar absolutamente el enlace dentro de la tarjeta */
 }
+
+.color3 h2 {
+  font-size: 2.5rem;
+  color: #3E5641;
+  font-weight: 600;
+  text-align: left;
+  padding: 5%;
+  margin: 0;
+  /* Esto elimina el margen predeterminado */
+}
+
+.color3 .download-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* Esto centra el contenido verticalmente */
+  justify-content: center;
+  /* Esto centra el contenido horizontalmente */
+  text-decoration: none;
+  /* Esto elimina el subrayado del enlace */
+}
+
 
 .color4 {
   background-color: #564138;
@@ -73,52 +104,51 @@ body {
 
 .color6 {
   background-color: #F58549;
-}
-
-.color7 {
-  background-color: #EAE2B7;
-}
-
-.color7 {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
 .color7 {
   background-color: #EAE2B7;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
 }
 
-.color7-header {
+.color7-content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
-  /* Alinea los elementos al borde inferior */
-  height: 100%;
-  /* Ocupa todo el espacio vertical disponible */
-  padding-bottom: 10px;
-  /* Agrega un espacio en la parte inferior para evitar que los elementos toquen el borde */
+  align-items: center;
+  height: 90%;
 }
 
 .color7 h2 {
-  font-size: 6rem;
-  color: #A24936;
-  margin-right: 1rem;
-  /* Aumenta el espacio entre el texto y los iconos */
+  font-size: 7rem; /* Ajusta según sea necesario */
+  color: #FF6969;
+  margin: 0;
 }
 
 .color7-icons {
   display: flex;
-  gap: 40px;
-}
-
-.color7-icon {
-  color: #A24936;
+  gap: 10px;
+  align-self: flex-end;
 }
 
 .color7-icon i {
-  font-size: 14rem;
+  color: #FF6969;
+  font-size: 7rem; /* Ajusta según sea necesario */
+  align-items: end;
+}
+
+.color7-header {
+  display: flex;
+  align-items: center; /* para alinear el texto y los iconos verticalmente */
+  justify-content: space-between; /* para separar el texto de los iconos */
+  width: 105%; /* para asegurarse de que el header tome todo el ancho disponible */
 }
 
 .card {
@@ -127,7 +157,7 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .card img.card-image {
@@ -140,7 +170,8 @@ body {
 }
 
 .special-card img.card-image {
-  width: 100%; /* o el tamaño que prefieras */
+  width: 100%;
+  /* o el tamaño que prefieras */
   max-height: 100%;
 }
 
@@ -155,33 +186,86 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Ajusta el espacio entre las sub-cards */
+  gap: 10px;
+  /* Ajusta el espacio entre las sub-cards */
 }
 
 .sub-card {
-  width: 100%; /* Ajusta el ancho de las sub-cards */
-  padding: 10px; /* Ajusta el padding de las sub-cards */
-  text-align: center; /* Centra el texto dentro de las sub-cards */
-  border-radius: 50px; /* Ajusta el border radius para darle esquinas redondeadas */
+  width: 100%;
+  /* Ajusta el ancho de las sub-cards */
+  padding: 10px;
+  /* Ajusta el padding de las sub-cards */
+  text-align: center;
+  /* Centra el texto dentro de las sub-cards */
+  border-radius: 50px;
+  /* Ajusta el border radius para darle esquinas redondeadas */
 }
 
 .color-sub1 {
-  background-color: #c8fc3e; /* Ajusta el color de fondo */
+  background-color: #9BCDD2;
+  /* Ajusta el color de fondo */
   color: #057194;
   font-size: 1rem;
   font-weight: 500;
 }
 
 .color-sub2 {
-  background-color: #c1f3e6; /* Ajusta el color de fondo */
-  color: #1F374B;
+  background-color: #FF8551;
+  /* Ajusta el color de fondo */
+  color: #FFDEDE;
   font-size: 1rem;
   font-weight: 500;
 }
 
 .color-sub3 {
-  background-color: #fedaf2; /* Ajusta el color de fondo */
-  color: #fc732d;
+  background-color: #FFDEDE;
+  /* Ajusta el color de fondo */
+  color: #FF8551;
   font-size: 1rem;
   font-weight: 500;
+}
+
+
+.circle-container {
+  display: flex;
+  gap: 10px;
+  /* Esto agregará un espacio entre cada círculo */
+}
+
+.circle {
+  width: 50px;
+  /* Ajusta según lo necesites */
+  height: 50px;
+  /* Ajusta según lo necesites */
+  border-radius: 50%;
+  /* Esto hará que los divs sean círculos */
+}
+
+.color1 {
+  background-color: #color1;
+}
+
+.color2 {
+  background-color: #FAF0E4;
+}
+
+.color3 {
+  background-color: #EEC170;
+}
+
+/* Define los colores para .color5, .color6, y .color7 basándote en los colores que has usado para tus otras tarjetas */
+.color5 {
+  background-color: #color5;
+}
+
+.color4 {
+  background-color: #color4;
+}
+
+.color7 {
+  background-color: #color7;
+}
+
+.color8 {
+  background-color: #FF6969;
 }

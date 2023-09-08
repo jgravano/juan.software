@@ -18,27 +18,27 @@ function LandingPage() {
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1vw', marginBottom: '1vh' }}>
         <Card className="color1"
           height="28vh"
-          width="60vw"
+          width="70vw"
           title={
             <div className="card-content">
               <h2>Juan Gravano</h2>
-              <p>Software Engineer</p>
+              <p>software dev</p>
             </div>
           }
-         // imageSrc={"https://docs.google.com/uc?export=download&id=1mpX-AJrs3uNQEksdhmaFlhWcwhsZaKJ9"}
+          imageSrc={"https://docs.google.com/uc?export=download&id=1Dpwel7xUS-bxBfNQ2B_yLvcnDILPox4o"}
         />
 
 
-        <Card className="color2" height="28vh" width="40vw" >
+        <Card className="color2" height="28vh" width="25vw" >
           <div className="sub-cards-container">
             <div className="sub-card color-sub1">
-              based in Buenos Aires, Argentina.
+              🇦🇷 Based in Buenos Aires, Argentina.
             </div>
             <div className="sub-card color-sub2">
-              based in Buenos Aires, Argentina.
+              🇦🇷 Based in Buenos Aires, Argentina.
             </div>
             <div className="sub-card color-sub3">
-              based in Buenos Aires, Argentina.
+              🇦🇷 Based in Buenos Aires, Argentina.
             </div>
           </div>
         </Card>
@@ -48,7 +48,7 @@ function LandingPage() {
         <Card className="color3" height="28vh" width="40vw">
           <a href="path/to/your/CV.pdf" download className="download-link">
             <h2>
-              Download Resume
+              download resume
               <i className="fa fa-chevron-down" style={{ marginLeft: '10px' }}></i>
             </h2>
           </a>
@@ -67,7 +67,6 @@ function LandingPage() {
             <div className="circle color4"></div>
             <div className="circle color5"></div>
             <div className="circle color7"></div>
-            <div className="circle color8"></div>
           </div>
         </Card>
         <Card className="color7" height="28vh" width="70vw">
@@ -75,9 +74,9 @@ function LandingPage() {
             <div className="color7-column">
               {[...Array(1)].map((_, i) => (
                 <div className="color7-header" key={i}>
-                  <h2>Contact me</h2>
+                  <h2>contact me</h2>
                   <div className="color7-icons">
-                    <a href="https://www.github.com/tu_nombre_de_usuario" target="_blank" rel="noopener noreferrer" className="color7-icon">
+                    <a href="https://www.github.com/jgravano" target="_blank" rel="noopener noreferrer" className="color7-icon">
                       <i className="fa fa-github-alt fa-2x"></i>
                     </a>
                   </div>

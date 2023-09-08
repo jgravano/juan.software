@@ -152,12 +152,12 @@ body {
 }
 
 .card {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   border-radius: 10px;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .card img.card-image {
@@ -264,8 +264,4 @@ body {
 
 .color7 {
   background-color: #color7;
-}
-
-.color8 {
-  background-color: #FF6969;
 }

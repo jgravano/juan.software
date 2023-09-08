@@ -1,53 +1,56 @@
-html, body {
+@import 'font-awesome/css/font-awesome.min.css';
+
+html,
+body {
   margin: 0;
   height: 100%;
+  background-color: black;
 }
 
-.container {
-  height: 100vh;
-  max-width: 100vw;
-  margin: 0 auto;
-  display: flex;
-}
-
-.column {
-  flex: 1;
-  height: 100vh;
-  transition: all 0.3s ease-out;
+.card-content * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .color1 {
-  background-color: #83BCA9;
+  background-color: #c1f3e6;
 }
 
-.color1 .card-content{
-  color: #1B3022;
+.color1 .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Esto garantiza que el contenedor tome toda la altura de la card */
 }
 
 .color1 h2 {
-  font-size: 5rem;
+  font-size: 8rem;
+  color: #1F374B;
+  font-weight: 700;
+  margin: 0; /* Esto eliminará cualquier margen predeterminado para equilibrar el espacio */
 }
 
 .color1 p {
-  font-size: 2rem;
+  font-size: 4rem;
+  color: #1B3022;
+  font-weight: 350;
+  margin: 0; /* Esto eliminará cualquier margen predeterminado para equilibrar el espacio */
 }
+
 
 .color2 {
-  background-color: #A24936;
+  background-color: #1F374B;
 }
 
-.color2 .card-content{
+.color2 .card-content {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
   color: #EAE2B7;
-  text-align: end;
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
-
 
 .color3 {
-  background-color: #EEC170;
+  background-color: #c8fc3e;
 }
 
 .color4 {
@@ -56,21 +59,16 @@ html, body {
 
 /* styles.css */
 .color4-text1 {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: #F58549;
-
+  font-weight: 600;
+  justify-content: center;
+  text-align: left;
+  padding: 5%;
 }
-
-.color4-text2 {
-  font-size: 2rem;
-  color: #F58549;
-
-}
-
 
 .color5 {
-  background-color: #3E5641
-  ;
+  background-color: #3E5641;
 }
 
 .color6 {
@@ -81,40 +79,46 @@ html, body {
   background-color: #EAE2B7;
 }
 
+.color7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color7 {
+  background-color: #EAE2B7;
+  position: relative;
+}
+
+.color7-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* Alinea los elementos al borde inferior */
+  height: 100%;
+  /* Ocupa todo el espacio vertical disponible */
+  padding-bottom: 10px;
+  /* Agrega un espacio en la parte inferior para evitar que los elementos toquen el borde */
+}
+
 .color7 h2 {
   font-size: 6rem;
   color: #A24936;
+  margin-right: 1rem;
+  /* Aumenta el espacio entre el texto y los iconos */
 }
 
-.column.active {
-  flex-grow: 1.25;
-  flex-shrink: 0.75;
+.color7-icons {
+  display: flex;
+  gap: 40px;
 }
 
-.profile {
-  position: relative;
-  margin-right: 20px;
-  width: 150px;
-  height: 150px;
+.color7-icon {
+  color: #A24936;
 }
 
-.profile img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.icons {
-  text-decoration: none;
-  text-decoration-color: black;
-}
-
-.anticon {
-  color: #6b7a60
+.color7-icon i {
+  font-size: 14rem;
 }
 
 .card {
@@ -124,4 +128,60 @@ html, body {
 
 .card:hover {
   transform: scale(1.05);
+}
+
+.card img.card-image {
+  width: 24.5%;
+  max-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.special-card img.card-image {
+  width: 100%; /* o el tamaño que prefieras */
+  max-height: 100%;
+}
+
+.color2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Ajusta el espacio entre las sub-cards */
+}
+
+.sub-card {
+  width: 100%; /* Ajusta el ancho de las sub-cards */
+  padding: 10px; /* Ajusta el padding de las sub-cards */
+  text-align: center; /* Centra el texto dentro de las sub-cards */
+  border-radius: 50px; /* Ajusta el border radius para darle esquinas redondeadas */
+}
+
+.color-sub1 {
+  background-color: #c8fc3e; /* Ajusta el color de fondo */
+  color: #057194;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.color-sub2 {
+  background-color: #c1f3e6; /* Ajusta el color de fondo */
+  color: #1F374B;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.color-sub3 {
+  background-color: #fedaf2; /* Ajusta el color de fondo */
+  color: #fc732d;
+  font-size: 1rem;
+  font-weight: 500;
 }

@@ -1,0 +1,43 @@
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f3f3f3; /* Color de fondo similar al de la imagen */
+}
+
+.error-code {
+    font-size: 72px;
+    font-weight: bold;
+    color: #333;
+}
+
+.error-computer {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://docs.google.com/uc?export=download&id=1J2JwWi3GoiNMugMPxiol6OH2ymgk4fq0');
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+}
+
+.error-message {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.back-home {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-home:hover {
+    background-color: #e44d23;
+}

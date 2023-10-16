@@ -1,17 +1,9 @@
 import React from 'react';
+import '../css/card.css';
 
 function Card({ className, height, width, title, text, imageSrc, link, children }) {
   return (
-    <div className={`card ${className}`}
-      style={{
-        height: height,
-        width: width,
-        padding: '10px',
-        boxSizing: 'content-box',
-        borderRadius: '15px',
-        overflow: 'hidden',
-        position: 'relative'
-      }}>
+    <div className={`card ${className}`} style={{ height, width }}>
       <div className="card-content">
         {imageSrc && <img className="card-image" src={imageSrc} alt={title} />}
         {title && <h2>{title}</h2>}
@@ -22,6 +14,7 @@ function Card({ className, height, width, title, text, imageSrc, link, children 
     </div>
   );
 }
+
 
 
 export default Card;

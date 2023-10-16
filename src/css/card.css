@@ -1,0 +1,52 @@
+@import 'font-awesome/css/font-awesome.min.css';
+
+.card-content * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card img.card-image {
+  width: 24.5%;
+  max-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.special-card img.card-image {
+  width: 100%;
+  /* o el tamaño que prefieras */
+  max-height: 100%;
+}
+
+.card {
+  padding: 10px;
+  box-sizing: content-box;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card-content {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Continuar creando clases para otros estilos inline */

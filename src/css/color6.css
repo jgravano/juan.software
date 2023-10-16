@@ -1,0 +1,42 @@
+.color6 {
+  background-color: #F58549;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-container {
+  display: flex;
+  gap: 10px;
+  /* Esto agregará un espacio entre cada círculo */
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+} 
+
+.color1 {
+  background-color: #016A70;
+}
+
+.color2 {
+  background-color: #FAF0E4;
+}
+
+.color3 {
+  background-color: #EEC170;
+}
+
+.color4 {
+  background-color: #564138;
+}
+
+.color5 {
+  background-color: #3E5641;
+}
+
+.color7 {
+  background-color: #EAE2B7;
+}

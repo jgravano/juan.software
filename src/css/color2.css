@@ -1,0 +1,59 @@
+.color2 {
+  background-color: #FAF0E4;
+}
+
+.color2 .card-content {
+  position: absolute;
+  color: #EAE2B7;
+  font-size: 1rem;
+}
+
+.color2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Ajusta el espacio entre las sub-cards */
+}
+
+.sub-card {
+  width: 100%;
+  /* Ajusta el ancho de las sub-cards */
+  padding: 10px;
+  /* Ajusta el padding de las sub-cards */
+  text-align: center;
+  /* Centra el texto dentro de las sub-cards */
+  border-radius: 50px;
+  /* Ajusta el border radius para darle esquinas redondeadas */
+}
+
+.color-sub1 {
+  background-color: #9BCDD2;
+  /* Ajusta el color de fondo */
+  color: #057194;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.color-sub2 {
+  background-color: #FF8551;
+  /* Ajusta el color de fondo */
+  color: #FFDEDE;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.color-sub3 {
+  background-color: #FFDEDE;
+  /* Ajusta el color de fondo */
+  color: #FF8551;
+  font-size: 1rem;
+  font-weight: 500;
+}

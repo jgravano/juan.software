@@ -1,20 +1,30 @@
 import React from 'react';
 import '../css/card.css';
+import Tilt from 'react-parallax-tilt';
 
-function Card({ className, height, width, title, text, imageSrc, link, children }) {
+function Card({ className, title, description, media, children }) {
   return (
-    <div className={`card ${className}`} style={{ height, width }}>
-      <div className="card-content">
-        {imageSrc && <img className="card-image" src={imageSrc} alt={title} />}
-        {title && <h2>{title}</h2>}
-        {text && <p>{text}</p>}
-        {link && <a href={link} target="_blank" rel="noopener noreferrer">Más información</a>}
-        {children}
-      </div>
-    </div>
+    <Tilt className="parallax-effect-glare-scale" perspective={20000} glareEnable={true} glareMaxOpacity={0.25} scale={1.02}>
+      <div className={`card ${className}`}>
+          <div className="card-content">
+            {title && <h2>{title}</h2>}
+            {description && <p>{description}</p>}
+              <div className="media-container">
+                {media && media.map((item, index) => (
+                  <React.Fragment key={index}>
+                    {item.type === 'image' && <img src={item.src} alt={`media-${index}`} className="card-image" />}
+                    {item.type === 'svg' && (
+                      typeof item.src === 'string' ? <img src={item.src} alt={`svg-${index}`} className="svg-image" /> : <item.src/>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            {children}
+          </div>
+        </div>
+    </Tilt>
   );
 }
-
 
 
 export default Card;

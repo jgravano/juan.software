@@ -1,51 +1,71 @@
-@import 'font-awesome/css/font-awesome.min.css';
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+  gap: 10px;
+  padding: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
 
-.card-content * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.row {
+  cursor: grab;
+}
+
+.row:active {
+  cursor: grabbing;
 }
 
 .card {
-  transition: transform 0.4s ease;
-  border-radius: 10px;
+  flex: 0 0 auto;
+  width: 490px;
+  height: 715px;
+  margin-bottom: 60px;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Agregado para espaciado interno */
 }
 
-.card:hover {
-  transform: scale(1.01);
+.card-container {
+  display: flex;
+  margin-left: 60px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.card img.card-image {
-  width: 24.5%;
-  max-height: 100%;
-  object-fit: cover;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+.card-image {
+  max-width: 100%; 
+  max-height: 100%; 
+  width: auto;
+  height: auto;
+  display: block; 
+  object-fit: cover; 
 }
 
-.special-card img.card-image {
-  width: 100%;
-  /* o el tamaño que prefieras */
-  max-height: 100%;
-}
-
-.card {
-  padding: 10px;
-  box-sizing: content-box;
-  border-radius: 15px;
-  overflow: hidden;
+.media-container {
   position: relative;
-  transition: transform 0.4s ease;
+  width: 500px; 
+  height: 500px; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  
 }
 
-.card:hover {
-  transform: scale(1.01);
+@media (hover: none) {
+  .card-container {
+    scrollbar-width: none;
+  }
 }
-
-.card-content {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-

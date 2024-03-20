@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 20px;
+}
+
+.header-content {
+  display: flex;
+  gap: 20px;
+
+}
+
+.header-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.header-arrows button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}

@@ -52,12 +52,12 @@ const useScroll = (ref) => {
 
   function scrollLeft() {
     const row = document.querySelector('.row');
-    row.scrollBy({ left: -300, behavior: 'smooth' }); // ajusta el valor según el tamaño de tus tarjetas
+    row.scrollBy({ left: -300, behavior: 'smooth' });
   }
   
   function scrollRight() {
     const row = document.querySelector('.row');
-    row.scrollBy({ left: 300, behavior: 'smooth' }); // ajusta el valor según el tamaño de tus tarjetas
+    row.scrollBy({ left: 300, behavior: 'smooth' });
   }
 
   return { scrollLeft, scrollRight };

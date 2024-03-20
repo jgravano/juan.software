@@ -4,7 +4,7 @@ const Header = ({ scrollLeft, scrollRight }) => {
   return (
     <div className="header">
       <div className="header-content">
-        <span>Connect your wallet</span>
+        <span>Juan Gravano</span>
       </div>
       <div className="header-arrows">
         <button onClick={scrollLeft}>&lt;</button>

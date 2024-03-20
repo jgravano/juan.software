@@ -5,21 +5,24 @@
 .color1 .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 90%;
-}
-
-.color1 h2 {
-  color: #FFFFDD;
-  font-weight: 900;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 6.5rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding: 0;
   margin: 0;
-}
-
-.color1 p {
+  height: 100%;
   color: #000000;
-  margin: 0;
 }
 
-.circle.color1 {
-  background-color: #3f0052;
+.color1 .media-container {
+
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #A6B1E1;
 }

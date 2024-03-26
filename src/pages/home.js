@@ -1,84 +1,75 @@
+import React, { useRef, useState, useEffect } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Text, OrbitControls } from '@react-three/drei';
 
-import useScroll from '../hooks/useScroll';
-import React, { useRef } from 'react';
-import Card from '../components/card';
-import Header from '../components/header';
-import '../css/card.css';
-import '../css/color1.css';
-import '../css/color2.css';
-import '../css/color3.css';
-import '../css/color4.css';
-import '../css/home.css';
-import { motion } from 'framer-motion';
-import { textVariants } from '../animations/motionVariants';
-
-function LandingPage() {
-  const rowRef = useRef(null);
-  const { scrollLeft, scrollRight } = useScroll(rowRef);
-
-  const logos = [
-    { type: 'svg', src: '/images/javascript.svg' },
-    { type: 'svg', src: '/images/kotlin-icon.svg' },
-    { type: 'svg', src: '/images/linux-tux.svg' },
-    { type: 'svg', src: '/images/nodejs.svg' },
-    { type: 'svg', src: '/images/python.svg' },
-    { type: 'svg', src: '/images/react.svg' },
-    { type: 'svg', src: '/images/selenium.svg' },
-    { type: 'svg', src: '/images/webdriverio.svg' },
-  ];
-
-  const avatar = [{ type: 'image', src: '/images/Avatar.png' }]
-
-  const angleStep = (2 * Math.PI) / logos.length;
-  const radius = 190; 
-  const logosWithPositioning = logos.map((logo, index) => {
-    const angle = index * angleStep;
-    const x = Math.cos(angle) * radius;
-    const y = Math.sin(angle) * radius;
-    return {
-      ...logo,
-      style: {
-        position: 'absolute',
-        left: `50%`,
-        top: `50%`,
-        transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`
-      }
-    };
+const AnimatedText = ({ text, hoverEffect, textSize }) => {
+  const textRef = useRef();
+  useFrame((state, delta) => {
+    {
+      textRef.current.position.y += Math.sin(state.clock.elapsedTime) * delta;
+      textRef.current.rotation.y += 0.00005;
+    }
   });
-  
 
   return (
-    <>
-      <Header scrollLeft={scrollLeft} scrollRight={scrollRight} />
-      <div className="row card-container">
-        <Card className="color1" media={avatar}>
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={textVariants}
-          >
-            <motion.span>Hola, </motion.span>
-            <motion.span>soy Juan</motion.span>
-          </motion.div>
-        </Card>
-        <Card className="color2" media={logosWithPositioning}>
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={textVariants}
-          >
-            <span>Soy desarrollador de software.</span>   
-          </motion.div>
-        </Card>
-        <Card className="color3">
-          <p></p>
-        </Card>
-        <Card className="color4">
-          <p></p>
-        </Card>
-      </div>
-    </>
+    <Text
+      ref={textRef}
+      fontSize={textSize}
+      fontWeight={700}
+      color="#5C8984"
+      anchorX="center"
+      anchorY="middle"
+      fontStyle='bold'
+    >
+      {text}
+    </Text>
   );
-}
+};
 
-export default LandingPage;
+const ResponsiveText = ({ text, isMobile }) => {
+
+  const words = text.split(' ');
+  const lineFactor = isMobile ? 1.2 : 0;
+
+  return words.map((word, index) => (
+    <Text
+      key={word + index}
+      fontSize={isMobile ? 0.5 : 1}
+      fontWeight={700}
+      color="#5C8984"
+      anchorX="center"
+      anchorY="middle"
+      fontStyle='bold'
+      position={[0, index * -lineFactor, 0]}
+    >
+      {word}
+    </Text>
+  ));
+};
+
+export const AnimatedPage = () => {
+  const text = "SORRY, WEBSITE UNDER CONSTRUCTION :)";
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <div style={{ height: '100vh', width: '100vw', background: 'black' }}>
+      <Canvas camera={{ position: [0, 0, 10], fov: 70 }}>
+        <OrbitControls />
+        <ambientLight intensity={0.3} />
+        <pointLight position={[10, 10, 10]} />
+        {isMobile
+          ? <ResponsiveText text={text} isMobile={isMobile} />
+          : <AnimatedText text={text} />}
+      </Canvas>
+    </div>
+  );
+};
